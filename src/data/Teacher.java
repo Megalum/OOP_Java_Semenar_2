@@ -9,6 +9,10 @@ public class Teacher extends User{
         this.disciplesTaught = disciplesTaught;
     }
 
+    public Teacher(){
+        new Teacher("Default","None","None");
+    }
+
 
     public String getDisciplesTaught() {
         return disciplesTaught;
