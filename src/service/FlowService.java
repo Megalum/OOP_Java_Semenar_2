@@ -28,7 +28,8 @@ public class FlowService implements StreamComparator {
     public String toString() {
         String out = "";
         for (int i = 0; i < flows.size(); i++) {
-            out += flows.get(i) + "\n-- new Flow --\n";
+            out += "-- new Flow -- \n";
+            out += flows.get(i) + "\n";
         }
         return out;
     }

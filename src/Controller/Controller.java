@@ -33,8 +33,8 @@ public class Controller {
         ((StudyGroup)group).add(student3);
         ((StudyGroup)group).add(student4);
         DataService studyGroupServes = new StudyGroupServis();
-        //studyGroupServes.create((StudyGroup)group, "Group1.txt");
-        //logger.info(studyGroupServes.read("Group1.txt").toString());
+        studyGroupServes.create((StudyGroup)group, "Group1.txt");
+        logger.info(studyGroupServes.read("Group1.txt").toString());
 
         User group1 = new StudyGroup();
         ((StudyGroup)group1).add(teacher1);
@@ -44,8 +44,8 @@ public class Controller {
         ((StudyGroup)group1).add(student13);
         ((StudyGroup)group1).add(student14);
         ((StudyGroup)group1).add(student15);
-        //studyGroupServes.create((StudyGroup)group1, "Group2.txt");
-        //logger.info(studyGroupServes.read("Group2.txt").toString());
+        studyGroupServes.create((StudyGroup)group1, "Group2.txt");
+        logger.info(studyGroupServes.read("Group2.txt").toString());
 
         User group2 = new StudyGroup();
         ((StudyGroup)group2).add(teacher1);
@@ -101,7 +101,7 @@ public class Controller {
         sgl3.add((StudyGroup) group1);
         sgl3.add((StudyGroup) group4);
 
-        /*for (int i = 0; i < sgl.getSize(); i++) {
+        for (int i = 0; i < sgl.getSize(); i++) {
             for (Object object: sgl.get(i)) {
                 logger.info(object.toString());
             }
@@ -120,14 +120,14 @@ public class Controller {
         for (int i = 0; i < sgl.getSize(); i++) {
             sgl.get(i).removeStudentByName("Сергей");
             logger.info(sgl.get(i).toString());
-        }*/
+        }
 
         FlowService fs = new FlowService();
         fs.add(sgl);
         fs.add(sgl1);
-        //fs.add(sgl2);
-        //fs.add(sgl3);
-        //fs.add(sgl4);
+        fs.add(sgl2);
+        fs.add(sgl3);
+        fs.add(sgl4);
         logger.info(fs.toString());
         logger.info("------------------------------------------------------");
 

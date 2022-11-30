@@ -20,6 +20,7 @@ public class Flow {
     public String toString() {
         String out = "";
         for (int i = 0; i < group.size(); i++) {
+            out += "- new Group -\n";
             out += group.get(i) + "\n";
         }
         return out;
